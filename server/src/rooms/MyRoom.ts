@@ -8,7 +8,7 @@ export class MyRoom extends Room<MyRoomState> {
   onCreate(options: any) {
     this.setState(new MyRoomState());
 
-    this.setSimulationInterval(() => this.onTick(), 600);
+    this.setSimulationInterval(() => this.onTick(), 1600);
 
     this.onMessage("move", (client, message) => {
       const player = this.state.players.get(client.sessionId);
